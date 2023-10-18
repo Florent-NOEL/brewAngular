@@ -1,0 +1,16 @@
+<div class="card card-container">
+  <p>Pour 20 L de bière {{ recetteStep1.volumeFinal | number : "1.0-2" }} L</p>
+  <p>Malt = {{ recetteStep1.quantiteMaltKg | number : "1.0-2" }} Kg</p>
+  <p>
+    Volume chauffe + rinçage {{ recetteStep1.volumeTotal | number : "1.0-2" }} L
+  </p>
+  <p>Volume chauffe {{ recetteStep1.volumeChauffe | number : "1.0-2" }} L</p>
+  <p>
+    Volume rinçage conseillé
+    {{ recetteStep1.volumeRincage | number : "1.0-2" }} L
+  </p>
+  <p>
+    Volume etimé avant ebullition =
+    {{ recetteStep1.volumeEbullition | number : "1.0-2" }} L
+  </p>
+</div>

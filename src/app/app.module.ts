@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { AffichageRecetteComponent } from './components/affichage-recette/affichage-recette.component';
 import { RecetteForm2Component } from './components/recette-form2/recette-form2.component';
 import { Recetteform3Component } from './components/recetteform3/recetteform3.component';
+import { RecetteCardComponent } from './components/recette-card/recette-card.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { Recetteform3Component } from './components/recetteform3/recetteform3.co
     AffichageRecetteComponent,
     RecetteForm2Component,
     Recetteform3Component,
+    RecetteCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

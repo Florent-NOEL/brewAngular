@@ -1,21 +1,25 @@
-<form (ngSubmit)="calculStep1()" #form="ngForm">
-  <div>
+<form class="card card-container" (ngSubmit)="calculStep1()" #form="ngForm">
+  <div class="j-center">
     <label for="degre"> </label>
     <input
+      class="input"
       placeholder="Alcool en degré"
       id="degre"
       name="degre"
       [(ngModel)]="degre"
     />
   </div>
-  <div>
+  <div class="j-center">
     <label for="volumeL"> </label>
     <input
+      class="input"
       placeholder="Volume en L"
       id="volumeL"
       name="volumeL"
       [(ngModel)]="volumeL"
     />
   </div>
-  <button type="submit">Calcul</button>
+  <div class="full-center">
+    <button class="btn-orange" type="submit">Calcul</button>
+  </div>
 </form>
