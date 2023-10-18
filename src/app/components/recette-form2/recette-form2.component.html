@@ -1,0 +1,26 @@
+<form (ngSubmit)="calculStep2()" #form="ngForm">
+  <div>
+    <label for="ebc"> </label>
+    <input placeholder="ebc" id="ebc" name="ebc" [(ngModel)]="ebc" />
+  </div>
+  <div>
+    <label for="weightGrain"> </label>
+    <input
+      placeholder="masse en Kg"
+      id="weightGrain"
+      name="weightGrain"
+      [(ngModel)]="weightGrain"
+    />
+  </div>
+  <div>
+    <label for="volume"> </label>
+    <input
+      placeholder="Volume Final en L"
+      id="volume"
+      name="volume"
+      [(ngModel)]="volume"
+    />
+  </div>
+  <button type="submit">Calcul</button>
+  <button type="button" (click)="pushMalt()">Ajouter malt</button>
+</form>

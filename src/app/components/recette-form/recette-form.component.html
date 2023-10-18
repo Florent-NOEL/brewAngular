@@ -1,0 +1,21 @@
+<form (ngSubmit)="calculStep1()" #form="ngForm">
+  <div>
+    <label for="degre"> </label>
+    <input
+      placeholder="Alcool en degré"
+      id="degre"
+      name="degre"
+      [(ngModel)]="degre"
+    />
+  </div>
+  <div>
+    <label for="volumeL"> </label>
+    <input
+      placeholder="Volume en L"
+      id="volumeL"
+      name="volumeL"
+      [(ngModel)]="volumeL"
+    />
+  </div>
+  <button type="submit">Calcul</button>
+</form>

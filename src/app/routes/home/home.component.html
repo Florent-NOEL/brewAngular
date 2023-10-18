@@ -1,0 +1,18 @@
+<app-recette-form (recetteCalcule)="addRecette($event)"></app-recette-form>
+
+<h1>Pour 20 L de bière {{ recetteStep1.volumeFinal | number : "1.0-2" }} L</h1>
+<h1>Malt = {{ recetteStep1.quantiteMaltKg | number : "1.0-2" }} Kg</h1>
+<h1>
+  Volume avant ebullition {{ recetteStep1.volumeTotal | number : "1.0-2" }} L
+</h1>
+<h1>Volume chauffe {{ recetteStep1.volumeChauffe | number : "1.0-2" }} L</h1>
+<h1>
+  Volume rinçage conseillé {{ recetteStep1.volumeRincage | number : "1.0-2" }} L
+</h1>
+<h1>
+  Volume etimé avant ebullition =
+  {{ recetteStep1.volumeEbullition | number : "1.0-2" }} L
+</h1>
+<app-recette-form2 (ebcTotalCalcule)="addEbc($event)"></app-recette-form2>
+
+<h1>ebc final value: {{ EbcFinal | number : "1.0-2" }}</h1>
