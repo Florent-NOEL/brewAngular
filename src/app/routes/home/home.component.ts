@@ -9,15 +9,18 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   recetteStep1!: RecetteStep1;
   EbcFinal!: number;
+  listMassHoublon!: number[];
   constructor() {
     this.recetteStep1 = new RecetteStep1(0, 0, 0, 0, 0, 0);
     this.EbcFinal = 0;
   }
   addRecette(enventElement: any) {
     this.recetteStep1 = enventElement;
-    console.log(this.recetteStep1.volumeFinal);
   }
   addEbc(enventElement: any) {
     this.EbcFinal = enventElement;
+  }
+  addMassHoublon(enventElement: any) {
+    this.listMassHoublon = enventElement.masseEnGramme;
   }
 }

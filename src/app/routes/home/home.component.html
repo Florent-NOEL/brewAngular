@@ -3,7 +3,7 @@
 <h1>Pour 20 L de bière {{ recetteStep1.volumeFinal | number : "1.0-2" }} L</h1>
 <h1>Malt = {{ recetteStep1.quantiteMaltKg | number : "1.0-2" }} Kg</h1>
 <h1>
-  Volume avant ebullition {{ recetteStep1.volumeTotal | number : "1.0-2" }} L
+  Volume chauffe + rinçage {{ recetteStep1.volumeTotal | number : "1.0-2" }} L
 </h1>
 <h1>Volume chauffe {{ recetteStep1.volumeChauffe | number : "1.0-2" }} L</h1>
 <h1>
@@ -16,3 +16,9 @@
 <app-recette-form2 (ebcTotalCalcule)="addEbc($event)"></app-recette-form2>
 
 <h1>ebc final value: {{ EbcFinal | number : "1.0-2" }}</h1>
+<app-recetteform3
+  (massHoublonCalcule)="addMassHoublon($event)"
+></app-recetteform3>
+<li *ngFor="let item of listMassHoublon; index as i">
+  {{ item | number : "1.0-2" }}
+</li>

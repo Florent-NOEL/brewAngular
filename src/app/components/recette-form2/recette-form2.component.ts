@@ -7,8 +7,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./recette-form2.component.css'],
 })
 export class RecetteForm2Component {
-  ebc!: number;
-  weightGrain!: number;
+  ebc!: number | null;
+  weightGrain!: number | null;
   ebcArray = new Array();
   weightGrainArray = new Array();
   volume!: number;
@@ -18,8 +18,8 @@ export class RecetteForm2Component {
 
   ngOnInit(): void {}
   calculStep2() {
-    this.ebcArray.push(this.ebc);
-    this.weightGrainArray.push(this.weightGrain);
+    this.pushMalt();
+
     this.calculServ
       .calculEbcTotal(this.ebcArray, this.weightGrainArray, this.volume)
       .subscribe((ebcCalc) => {
@@ -29,7 +29,16 @@ export class RecetteForm2Component {
       });
   }
   pushMalt() {
-    this.ebcArray.push(this.ebc);
-    this.weightGrainArray.push(this.weightGrain);
+    if (
+      this.ebc != null &&
+      this.ebc != 0 &&
+      this.weightGrain != null &&
+      this.weightGrain != 0
+    ) {
+      this.ebcArray.push(this.ebc);
+      this.weightGrainArray.push(this.weightGrain);
+      this.ebc = null;
+      this.weightGrain = null;
+    }
   }
 }

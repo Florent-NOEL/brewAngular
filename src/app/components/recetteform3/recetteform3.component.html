@@ -1,0 +1,49 @@
+<form (ngSubmit)="calculStep3()" #form="ngForm">
+  <div>
+    <label for="ibuRecherche"> </label>
+    <input
+      placeholder="ibu recherché"
+      id="ibuRecherche"
+      name="ibuRecherche"
+      [(ngModel)]="ibuRecherche"
+    />
+  </div>
+  <div>
+    <label for="acidAlpha"> </label>
+    <input
+      placeholder="acid alpha du houblon"
+      id="acidAlpha"
+      name="acidAlpha"
+      [(ngModel)]="acidAlpha"
+    />
+  </div>
+  <div>
+    <label for="TauxExtraction"> </label>
+    <input
+      placeholder="taux d'extraction"
+      id="TauxExtraction"
+      name="TauxExtraction"
+      [(ngModel)]="TauxExtraction"
+    />
+  </div>
+  <div>
+    <label for="Proportion"> </label>
+    <input
+      placeholder="proportion total du houblon"
+      id="Proportion"
+      name="Proportion"
+      [(ngModel)]="Proportion"
+    />
+  </div>
+  <div>
+    <label for="volume"> </label>
+    <input
+      placeholder="Volume Final en L"
+      id="volume"
+      name="volume"
+      [(ngModel)]="volume"
+    />
+  </div>
+  <button type="submit">Calcul</button>
+  <button type="button" (click)="pushHoublonModel()">Ajouter houblon</button>
+</form>
