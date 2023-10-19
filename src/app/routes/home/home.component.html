@@ -1,14 +1,17 @@
 <div class="handle-card">
   <app-recette-form (recetteCalcule)="addRecette($event)"></app-recette-form>
-  <app-recette-card [recetteStep1]="recetteStep1"></app-recette-card>
+  <app-recette-card
+    [listMassHoublon]="listMassHoublon"
+    [recetteStep1]="recetteStep1"
+    [EbcFinal]="EbcFinal"
+  ></app-recette-card>
+  <app-recette-form2
+    class="bottom-card"
+    (ebcTotalCalcule)="addEbc($event)"
+  ></app-recette-form2>
+  <app-recetteform3
+    [volume]="volumeFinal"
+    class="bottom-card"
+    (massHoublonCalcule)="addMassHoublon($event)"
+  ></app-recetteform3>
 </div>
-
-<app-recette-form2 (ebcTotalCalcule)="addEbc($event)"></app-recette-form2>
-
-<p>ebc final value: {{ EbcFinal | number : "1.0-2" }}</p>
-<app-recetteform3
-  (massHoublonCalcule)="addMassHoublon($event)"
-></app-recetteform3>
-<li *ngFor="let item of listMassHoublon; index as i">
-  {{ item | number : "1.0-2" }}
-</li>

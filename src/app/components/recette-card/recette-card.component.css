@@ -1,3 +1,10 @@
 .card{
   color: #FF6347;;
 }
+.recette-card{
+  display: flex;
+  justify-content: space-around;
+}
+.div-50{
+  width: 50%;
+}

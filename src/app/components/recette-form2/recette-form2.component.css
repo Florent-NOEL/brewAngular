@@ -1,0 +1,17 @@
+.input{
+  margin-top: 20px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.icon {
+  height: 30px;
+  width: 30px;
+  display: block;
+
+  /* Other styles here */
+}
+

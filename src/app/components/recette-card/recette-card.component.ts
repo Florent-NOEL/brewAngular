@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { HoublonModel } from 'src/app/models/houblon-model';
 import { RecetteStep1 } from 'src/app/models/recette-step1';
 
 @Component({
@@ -9,4 +10,8 @@ import { RecetteStep1 } from 'src/app/models/recette-step1';
 export class RecetteCardComponent {
   @Input()
   recetteStep1!: RecetteStep1;
+  @Input()
+  EbcFinal!: number;
+  @Input()
+  listMassHoublon!: number[];
 }

@@ -1,4 +1,9 @@
 .handle-card{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.bottom-card{
+  padding-top: 15px;
 }

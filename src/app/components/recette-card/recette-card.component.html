@@ -1,16 +1,32 @@
-<div class="card card-container">
-  <p>Pour 20 L de bière {{ recetteStep1.volumeFinal | number : "1.0-2" }} L</p>
-  <p>Malt = {{ recetteStep1.quantiteMaltKg | number : "1.0-2" }} Kg</p>
-  <p>
-    Volume chauffe + rinçage {{ recetteStep1.volumeTotal | number : "1.0-2" }} L
-  </p>
-  <p>Volume chauffe {{ recetteStep1.volumeChauffe | number : "1.0-2" }} L</p>
-  <p>
-    Volume rinçage conseillé
-    {{ recetteStep1.volumeRincage | number : "1.0-2" }} L
-  </p>
-  <p>
-    Volume etimé avant ebullition =
-    {{ recetteStep1.volumeEbullition | number : "1.0-2" }} L
-  </p>
+<div class="card card-container recette-card">
+  <div class="div-50">
+    <p>
+      Pour 20 L de bière {{ recetteStep1.volumeFinal | number : "1.0-2" }} L
+    </p>
+    <p>Malt = {{ recetteStep1.quantiteMaltKg | number : "1.0-2" }} Kg</p>
+    <p>
+      Volume chauffe + rinçage
+      {{ recetteStep1.volumeTotal | number : "1.0-2" }} L
+    </p>
+    <p>Volume chauffe {{ recetteStep1.volumeChauffe | number : "1.0-2" }} L</p>
+    <p>
+      Volume rinçage conseillé
+      {{ recetteStep1.volumeRincage | number : "1.0-2" }} L
+    </p>
+    <p>
+      Volume etimé avant ebullition =
+      {{ recetteStep1.volumeEbullition | number : "1.0-2" }} L
+    </p>
+    <p>ebc final value: {{ EbcFinal | number : "1.0-2" }}</p>
+  </div>
+  <div class="div-50">
+    <p>
+      Taux extraction houblon: 0.3 si 60 min ébulition, 0.28-50min, 0.23-40min,
+      0.15-30min,0.1-20min, 0.6-10min :
+    </p>
+
+    <li *ngFor="let item of listMassHoublon; index as i">
+      houblon {{ i + 1 }} = {{ item | number : "1.0-2" }} g
+    </li>
+  </div>
 </div>

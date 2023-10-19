@@ -1,5 +1,5 @@
 import { HoublonModel } from './../../models/houblon-model';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CalculService } from 'src/app/services/calcul.service';
 
 @Component({
@@ -13,6 +13,7 @@ export class Recetteform3Component {
   Proportion!: number | null;
   houblonModelList = new Array();
   houblon!: HoublonModel;
+  @Input()
   volume!: number;
   ibuRecherche!: number;
   constructor(private calculServ: CalculService) {}

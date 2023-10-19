@@ -1,49 +1,49 @@
-<form (ngSubmit)="calculStep3()" #form="ngForm">
-  <div>
+<form class="card card-container" (ngSubmit)="calculStep3()" #form="ngForm">
+  <div class="j-center">
     <label for="ibuRecherche"> </label>
     <input
+      class="input"
       placeholder="ibu recherché"
       id="ibuRecherche"
       name="ibuRecherche"
       [(ngModel)]="ibuRecherche"
     />
   </div>
-  <div>
+  <div class="j-center">
     <label for="acidAlpha"> </label>
     <input
+      class="input"
       placeholder="acid alpha du houblon"
       id="acidAlpha"
       name="acidAlpha"
       [(ngModel)]="acidAlpha"
     />
   </div>
-  <div>
+  <div class="j-center">
     <label for="TauxExtraction"> </label>
     <input
+      class="input"
       placeholder="taux d'extraction"
       id="TauxExtraction"
       name="TauxExtraction"
       [(ngModel)]="TauxExtraction"
     />
   </div>
-  <div>
+  <div class="j-center">
     <label for="Proportion"> </label>
     <input
+      class="input"
       placeholder="proportion total du houblon"
       id="Proportion"
       name="Proportion"
       [(ngModel)]="Proportion"
     />
   </div>
-  <div>
-    <label for="volume"> </label>
-    <input
-      placeholder="Volume Final en L"
-      id="volume"
-      name="volume"
-      [(ngModel)]="volume"
-    />
+
+  <div class="full-center">
+    <button class="btn-orange" type="submit">Calcul</button>
+    <button class="btn-orange" type="button" (click)="pushHoublonModel()">
+      <img class="icon" src="../../../assets/image/plus.ico" />
+    </button>
   </div>
-  <button type="submit">Calcul</button>
-  <button type="button" (click)="pushHoublonModel()">Ajouter houblon</button>
 </form>

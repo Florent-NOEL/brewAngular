@@ -1,26 +1,38 @@
-<form (ngSubmit)="calculStep2()" #form="ngForm">
-  <div>
+<form class="card card-container" (ngSubmit)="calculStep2()" #form="ngForm">
+  <div class="j-center">
     <label for="ebc"> </label>
-    <input placeholder="ebc" id="ebc" name="ebc" [(ngModel)]="ebc" />
+    <input
+      class="input"
+      placeholder="ebc"
+      id="ebc"
+      name="ebc"
+      [(ngModel)]="ebc"
+    />
   </div>
-  <div>
+  <div class="j-center">
     <label for="weightGrain"> </label>
     <input
+      class="input"
       placeholder="masse en Kg"
       id="weightGrain"
       name="weightGrain"
       [(ngModel)]="weightGrain"
     />
   </div>
-  <div>
+  <div class="j-center">
     <label for="volume"> </label>
     <input
+      class="input"
       placeholder="Volume Final en L"
       id="volume"
       name="volume"
       [(ngModel)]="volume"
     />
   </div>
-  <button type="submit">Calcul</button>
-  <button type="button" (click)="pushMalt()">Ajouter malt</button>
+  <div class="full-center">
+    <button class="btn-orange" type="submit">Calcul</button>
+    <button class="btn-orange" type="button" (click)="pushMalt()">
+      <img class="icon" src="../../../assets/image/plus.ico" />
+    </button>
+  </div>
 </form>
